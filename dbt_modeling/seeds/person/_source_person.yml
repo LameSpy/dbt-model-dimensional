@@ -1,0 +1,55 @@
+version: 2 
+
+seeds: 
+  - name: address
+    config: 
+      schema: raw
+      column_types: 
+        addressid: integer
+        stateprovinceid: integer
+        city: string
+        addressline2: string 
+        modifieddate: timestamp
+        rowguid: string
+        postalcode: string
+        spatiallocation: string
+        addressline1: string
+  
+  - name: countryregion
+    config: 
+      schema: raw
+      column_types: 
+        countryregioncode: string
+        modifieddate: timestamp
+        name: string
+
+  - name: person
+    config: 
+      schema: raw
+      column_types: 
+        businessentityid: integer
+        title: string
+        firstname: string
+        middlename: string 
+        lastname: string
+        namestyle: boolean
+        suffix: string
+        modifieddate: timestamp
+        rowguid: string
+        emailpromotion: integer
+  
+  - name: stateprovince
+    config: 
+      schema: raw
+      column_types: 
+        stateprovinceid: integer
+        countryregioncode: string
+        modifieddate: timestamp
+        rowguid: string 
+        name: string
+        territoryid: integer
+        isonlystateprovinceflag: boolean
+        stateprovincecode: string
+  
+
+

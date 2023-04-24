@@ -1,0 +1,94 @@
+version: 2 
+
+seeds: 
+  - name: creditcard
+    config: 
+      schema: raw
+      column_types: 
+        creditcardid: integer
+        cardtype: string
+        expyear: integer
+        modifieddate: timestamp
+        expmonth: integer
+        cardnumber: string
+
+  - name: customer
+    config: 
+      schema: raw
+      column_types: 
+        customerid: integer
+        personid: integer
+        storeid: integer
+        territoryid: integer
+
+  - name: salesorderdetail
+    description: contains sales data between 2011-01-01 to 2011-12-31.  
+    config: 
+      schema: raw
+      column_types: 
+        salesorderid: integer
+        orderqty: integer
+        salesorderdetailid: integer
+        unitprice: numeric
+        specialofferid: integer
+        modifieddate: timestamp
+        rowguid: string
+        productid: integer
+        unitpricediscount: numeric
+  
+  - name: salesorderheader
+    description: contains sales data between 2011-01-01 to 2011-12-31.  
+    config: 
+      schema: raw
+      column_types: 
+        salesorderid: integer
+        shipmethodid: integer
+        billtoaddressid: integer
+        modifieddate: timestamp
+        rowguid: string
+        taxamt: numeric
+        shiptoaddressid: integer
+        onlineorderflag: boolean
+        territoryid: integer
+        status: integer
+        orderdate: timestamp
+        creditcardapprovalcode: string
+        subtotal: numeric
+        creditcardid: integer
+        currencyrateid: integer
+        revisionnumber: integer
+        freight: numeric
+        duedate: timestamp
+        totaldue: numeric
+        customerid: integer
+        salespersonid: integer
+        shipdate: timestamp
+        accountnumber: string
+
+  - name: salesorderheadersalesreason
+    description: contains sales data between 2011-01-01 to 2011-12-31.  
+    config: 
+      schema: raw
+      column_types: 
+        salesorderid: integer
+        modifieddate: timestamp
+        salesreasonid: integer
+  
+  - name: salesreason
+    config: 
+      schema: raw
+      column_types: 
+        salesreasonid: integer
+        name: string
+        reasontype: string
+        modifieddate: timestamp
+
+  - name: store
+    config: 
+      schema: raw
+      column_types: 
+        businessentityid: integer
+        storename: string
+        salespersonid: integer
+        modifieddate: timestamp
+

@@ -1,0 +1,44 @@
+version: 2 
+
+seeds: 
+  - name: product
+    config: 
+      schema: raw
+      column_types: 
+        productid: integer
+        name: string
+        safetystocklevel: integer
+        finishedgoodsflag: boolean 
+        class: string
+        makeflag: boolean
+        productnumber: string
+        reorderpoint: integer
+        modifieddate: timestamp
+        rowguid: string
+        productmodelid: integer
+        weightunitmeasurecode: string
+        standardcost: numeric
+        productsubcategoryid: integer
+        listprice: numeric
+        daystomanufacture: integer
+        productline: string
+        color: string
+        sellstartdate: timestamp
+        weight: numeric
+  
+  - name: productcategory
+    config: 
+      schema: raw
+      column_types: 
+        productcategoryid: integer
+        name: string
+        modifieddate: timestamp
+
+  - name: productsubcategory
+    config: 
+      schema: raw
+      column_types: 
+        productsubcategoryid: integer
+        productcategoryid: integer
+        name: string
+        modifieddate: timestamp
